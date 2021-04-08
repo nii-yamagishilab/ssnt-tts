@@ -1,6 +1,6 @@
 import librosa
 import numpy as np
-import scipy
+from scipy.io.wavfile import write as write_wav
 
 
 class Audio:
@@ -20,7 +20,7 @@ class Audio:
 
     def save_wav(self, wav, path):
         wav = wav * 32767 / max(0.01, np.max(np.abs(wav)))
-        scipy.io.wavfile.write(path, self.hparams.sample_rate, wav.astype(np.int16))
+        write_wav(path, self.hparams.sample_rate, wav.astype(np.int16))
 
     def trim(self, wav):
         unused_trimed, index = librosa.effects.trim(wav, top_db=self.hparams.trim_top_db,
