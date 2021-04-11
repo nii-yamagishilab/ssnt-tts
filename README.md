@@ -18,14 +18,23 @@ Please refer to the following papers for details.
 - pyspark=2.4.0
 - tensorflow=1.14.0
 - unidecode=1.2.0
-- ssnt-tts-rust
+- [ssnt-tts-rust](https://github.com/nii-yamagishilab/ssnt-tts-rust)
 
 ### Others
 
 - [JRE8 (java runtime required by pyspark)](https://adoptopenjdk.net/)
-- [Cargo (Rust compiler and dependency manager)](https://rustup.rs/)
+- [Cargo (Rust compiler and dependency manager required by ssnt-tts-rust)](https://rustup.rs/)
 
+### ssnt-tts-rust
 
+```
+git clone git@github.com:nii-yamagishilab/ssnt-tts-rust.git
+cd ssnt-tts-rust/ssnt_tts_c 
+cargo build --release
+cd ..
+cd ssnt-tts-tensorflow 
+python setup.py install
+```
 
 ## Preprocess
 
