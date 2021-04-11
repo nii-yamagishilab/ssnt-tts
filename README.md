@@ -72,7 +72,7 @@ python  predict_mel.py --output-dir=<path to output directory> --source-data-roo
 
 BSD 3-Clause License
 
-Copyright (c) 2021, Yusuke Yasuda at Yamagishi Laboratory, National Institute of Informatics
+Copyright (c) 2021, Yamagishi Laboratory, National Institute of Informatics
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
